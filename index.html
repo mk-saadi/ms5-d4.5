@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Orbitron:wght@900&family=Playfair+Display:wght@500;900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            /* height: 100vh; */
+            max-width: 1280px;
+            margin: 10% !important;
+            font-family: 'Abril Fatface', cursive;
+            margin-top: 5% !important;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-pink-100 to-pink-200">
+    <header class="text-center text-7xl ">
+        <h1 class="">Welcome To  <span class="mb-16 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+        <span class="relative text-white">Axis Bank</span>
+        </h1>
+    </header>
+    <center><hr class="w-2/4 border border-red-400 rounded"></center>
+    <br>
+    <br>
+
+
+    <!-- main section -->
+    <main>
+        <section>
+
+            <!--* balance summery -->
+            <div class="grid gap-3 w-5/6 mx-auto mt-16 text-white bg-pink-300 p-8 rounded ">
+               <div class="bg-gradient-to-t from-pink-600 to-pink-400 rounded text-center px-3 py-4  drop-shadow-[3px_3px_3px_rgba(0,0,0,0.40)] hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.60)] ease-in duration-100 border-t border-l">
+                <p class="text-3xl">Deposit</p>
+                <p class="text-4xl">TK: <span id="deposit-total">000</span></p>
+               </div>
+               <div class="bg-gradient-to-t from-pink-600 to-pink-400 rounded text-center px-3 py-4  drop-shadow-[3px_3px_3px_rgba(0,0,0,0.50)] hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.60)] ease-in duration-100 border-t border-l">
+                <p class="text-3xl">Withdraw</p>
+                <p class="text-4xl">TK <span id="withdraw-total">000</span></p>
+               </div>
+                <div class="col-span-2 bg-gradient-to-t from-pink-600 to-pink-400 rounded text-center px-3 py-6 drop-shadow-[3px_3px_3px_rgba(0,0,0,0.50)] hover:drop-shadow-[5px_5px_5px_rgba(0,0,0,0.60)] ease-in duration-100 border-t border-l">
+                    <p class="text-4xl">Balance</p>
+                    <p class="text-5xl">TK <span id="balance-total">9610.58</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!--* deposit and withdraw -->
+
+        <section>
+            <div>
+                <div class="grid grid-cols-2 gap-6 w-5/6 mx-auto m-4 mt-8  bg-gradient-to-t from-rose-400 to-rose-300 p-8 pb-20 rounded">
+                    <div class="">
+                        <p class="text-white text-4xl mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.40)]">Your Deposit</p>
+                        <input id="deposit-field" class="italic placeholder:italic text-2xl placeholder:text-xl placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-9 pr-3 shadow-sm focus:outline-none focus:border-emerald-500 focus:ring-emerald-500 focus:ring-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.30)] hover:drop-shadow-[0_2px_2px_rgba(0,0,0,0.50)] ease-in duration-200 border-t-emerald-500 border-l-emerald-500" type="text" name="" placeholder="Amount you want to Deposit">
+                        <button id="btn-deposit" class="italic text-white text-3xl bg-emerald-600 mt-4 px-2 py-1 rounded rounded-tr-2xl rounded-bl-2xl  drop-shadow-[0_5px_5px_rgba(0,0,0,0.30)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.50)] hover:bg-emerald-500 hover:scale-105 ease-in-out duration-200  border-t border-l outline outline-1 outline-offset-2 hover:outline-offset-0">Deposit</button>
+                    </div>
+                    <div class="">
+                        <p class="text-white text-4xl mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.40)]">Withdraw Cash</p>
+                        <input id="withdraw-field" class="italic placeholder:italic text-2xl placeholder:text-xl placeholder:text-slate-400 block bg-white w-full border border-rose-300 rounded-md py-4 pl-9 pr-3 shadow-sm focus:outline-none focus:border-rose-500 focus:ring-rose-500 focus:ring-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.50)] hover:drop-shadow-[0_2px_2px_rgba(0,0,0,0.60)] ease-in duration-200 border-t-rose-500 border-l-rose-500" type="text" name="" placeholder="Amount you want to Withdraw">
+                        <button id="btn-withdraw" class="italic text-white text-3xl bg-rose-600 mt-4 px-2 py-1 rounded rounded-tr-2xl rounded-bl-2xl  drop-shadow-[0_5px_5px_rgba(0,0,0,0.50)] hover:drop-shadow-[0_8px_8px_rgba(0,0,0,0.60)] hover:bg-rose-500 hover:scale-105 ease-in-out duration-200 border-t border-l outline outline-1 outline-offset-2 hover:outline-offset-0">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ! Utility file sobar upore thakbe -->
+    <!-- ! Utility file sobar upore thakbe -->
+    <!-- ! Utility file sobar upore thakbe -->
+
+    <script src="js/utility.js"></script>
+
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>
